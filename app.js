@@ -3,9 +3,13 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const bodyParer = require('body-parser');
+const cors = require('cors');
 require('dotenv/config');
 
+//Middlewares
+app.use(cors());
 app.use(bodyParer.json());
+
 //Import Routes
 const postsRoute = require('./routes/posts');
 app.use('/posts',postsRoute);
@@ -20,4 +24,4 @@ mongoose.connect(process.env.DB_CONNECTION,
   ()=>console.log('Connected to DB!')
 );
 
-app.listen(3000)
+app.listen(3000);
