@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <div>
+            <b>Fill Out the Testing Data:</b>
+            <hr/>
+            <form action="create_employees" method = "POST">
+                <input placeholder="employees" name="employees"/> 
+                <input placeholder="id" name="id"/>
+                <input placeholder="position" name="position"/>
+                <button>Create</button>
+            </form>
+            <form action="delete_employees?_method=DELETE" method = "POST">
+                <input placeholder="id" name="id"/>
+                <button>Delete</button>
+            </form>
+            <hr/>
+            <form action="find" method = "GET">
+                <button>Find the record</button>
+            </form>
+        </div>
+    </body>
+</html>
